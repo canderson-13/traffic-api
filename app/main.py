@@ -37,7 +37,7 @@ async def get_date_filtered_data(
             status_code=400, detail="Start year must not be greater than end year."
         )
     select_stmt = (
-        select(TrafficData).where(between(TrafficData.year, start, end)).limit(5)
+        select(TrafficData).where(between(TrafficData.year, start, end)).limit(100)
     )
     return execute_query(db, select_stmt)
 
@@ -81,6 +81,6 @@ async def get_geo_radius_filtered_data(
     select_stmt = (
         select(TrafficData)
         .filter(geofunc.ST_DWithin(TrafficData.geom, point, radius * 1000))
-        .limit(5)
+        .limit(100)
     )
     return execute_query(db, select_stmt)
