@@ -55,7 +55,9 @@ async def get_road_filtered_data(
     db: Session = Depends(get_db),
 ):
     name = name.strip()
-    select_stmt = select(TrafficData).filter(TrafficData.road_name.ilike(name))
+    select_stmt = (
+        select(TrafficData).filter(TrafficData.road_name.ilike(name)).limit(100)
+    )
     return execute_query(db, select_stmt)
 
 
