@@ -1,5 +1,3 @@
-# Traffic Data Filtering API
-
 Welcome to the Traffic Data Filtering API! This API allows users to query and filter traffic data based on specific parameters, including:
 
 - **Date (Year)**: Filter traffic data by a specific year.

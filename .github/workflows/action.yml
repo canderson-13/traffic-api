@@ -46,7 +46,7 @@ jobs:
         run: |
           docker build --no-cache -t traffic-api .
 
-      - name: Build and tag Docker image with commit SHA
+      - name: Build and tag Docker image
         run: |
           docker build -t traffic_api .
           docker tag traffic_api ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/traffic_api:latest

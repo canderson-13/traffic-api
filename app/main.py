@@ -14,7 +14,7 @@ from app.utils import execute_query, get_docs
 
 
 app = FastAPI(
-    title="Traffic data API",
+    title="Traffic Data Filtering API",
     description=get_docs(),
     version="0.0.1",
 )
