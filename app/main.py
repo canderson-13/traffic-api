@@ -84,4 +84,4 @@ async def get_geo_radius_filtered_data(
     return execute_query(db, select_stmt)
 
 
-# TODO: add root and health check routes, update db creds, monitoring, alerting, documentation, finish testing?, github secrets and actions, rate limiting, paging
+# TODO: monitoring, alerting, documentation, rate limiting, paging

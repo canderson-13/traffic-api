@@ -8,3 +8,5 @@ shapely
 pydantic
 psycopg2-binary
 boto3
+pytest==6.2.5
+httpx
