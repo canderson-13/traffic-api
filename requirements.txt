@@ -1,2 +1,12 @@
 aws-cdk-lib==2.167.1
 constructs>=10.0.0,<11.0.0
+fastapi
+uvicorn
+sqlalchemy
+geoalchemy2
+shapely
+pydantic
+psycopg2-binary
+boto3
+pytest==6.2.5
+httpx
