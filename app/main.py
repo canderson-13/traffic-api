@@ -55,7 +55,7 @@ async def get_road_filtered_data(
     db: Session = Depends(get_db),
 ):
     name = name.strip()
-    select_stmt = select(TrafficData).filter(TrafficData.road_name.ilike(name)).limit(5)
+    select_stmt = select(TrafficData).filter(TrafficData.road_name.ilike(name))
     return execute_query(db, select_stmt)
 
 
@@ -82,6 +82,3 @@ async def get_geo_radius_filtered_data(
         .limit(5)
     )
     return execute_query(db, select_stmt)
-
-
-# TODO: monitoring, alerting, documentation, rate limiting, paging
